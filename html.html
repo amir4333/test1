@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .parent{
+            background-color: lime;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            display: flex;
+        }
+
+        .child{
+            background-color: blue;
+            width: 10%;
+            height: 10%;
+            animation: ani1 2s forwards infinite;
+            animation-play-state: paused;
+        }
+
+        .child2{
+            background-color: red;
+            width: 10%;
+            height: 10%;
+            animation: ani2 2s forwards infinite;
+            animation-play-state: paused;
+            margin-top: 10%;
+        }
+
+        .parent:hover .child{
+            animation-play-state: running;
+        }
+
+        .parent:hover .child2{
+            animation-play-state: running;
+        }
+
+        @keyframes ani1 {
+            25%{
+                transform: translateY(180px);
+            }
+            50%{
+                transform: translate(180px,180px);
+            }
+            75%{
+                transform: translatex(180px);
+            }
+            100%{
+                transform: translate(0px);
+            }
+        }
+
+        @keyframes ani2 {
+            25%{
+                transform: translatex(140px);
+            }
+            50%{
+                transform: translate(140px,140px);
+            }
+            75%{
+                transform: translateY(140px);
+            }
+            100%{
+                transform: translate(0px);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    
+<div class="parent">
+    <div class="child">
+        <p class="p">test 1</p>
+    </div>
+    <div class="child2">
+        <p class="p">test 2</p>
+    </div>
+    <!-- <div class="child">
+        <p class="p">test 3</p>
+    </div>
+    <div class="child">
+        <p class="p">test 4</p>
+    </div>
+    <div class="child">
+        <p class="p">test 5</p>
+    </div> -->
+</div>
+
+</body>
+</html>
